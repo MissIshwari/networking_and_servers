@@ -1,0 +1,28 @@
+server{
+        server_name blog.awesomeweb;
+        root /var/www/awesomeweb;
+        access_log /var/log/nginx/blog_awesomeweb.access.log;
+        error_log /var/log/nginx/blog_awesomeweb.error.log;
+        location / {
+                index blog.html;
+        }
+
+}
+server{
+        server_name shop.awesomeweb;
+        root /var/www/awesomeweb;
+        access_log /var/log/nginx/shop_awesomeweb.access.log;
+        error_log /var/log/nginx/shop_awesomeweb.error.log;
+        location / {
+                index shop.html;
+        }
+}
+server{
+ server_name awesomeweb;
+ root /var/www/awesomeweb;
+ access_log /var/log/nginx/awesomeweb.access.log;
+ error_log /var/log/nginx/awesomeweb.error.log;
+ location / {
+  index index.html;
+	}
+}
